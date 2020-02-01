@@ -1,0 +1,10 @@
+<table class="table table-light">
+<tbody>
+  <tr *ngFor='let i of listoftasks' scope="row" style="border:0; border-bottom: 1px solid #eaeaea;">
+    <td>{{i.taskname}}<br><small>Due {{i.due}}</small></td>
+    <td>{{i.completed}}</td>
+    <td><button type="button" name="button" class="btn-warning btn btn-sm" (click)="openwin(contentw,i)">Modify</button></td>
+    <td><button type="button" name="button" class="btn-danger btn btn-sm" (click)="removetask(i.taskname)">Remove</button></td>
+  </tr>
+</tbody>
+</table>

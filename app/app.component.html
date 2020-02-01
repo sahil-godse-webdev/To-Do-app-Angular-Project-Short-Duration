@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <h3 style="background: #5680E9;" class="text-white text-center p-2 m-0"><span style="color: #c1c8e4;">To Do</span></h3>
+    <div class="row container-fluid">
+      <div class="col-2" style="background: #f4f4f4; border-right: 1px solid #eaeaea;">
+        <div class="nav flex-column nav-pills py-5" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link text-dark my-1 text-left" data-toggle="pill" role="tab" aria-controls="v-pills-home">
+            <button type="button" class="btn btn-outline-secondary" ngbPopover="You see, page will get refreshed!" triggers="mouseenter:mouseleave" popoverTitle="Refresh Page" (click)="reload()">
+              Relive page
+            </button>
+          </a>
+          <a class="nav-link text-dark navtab my-1 text-left" data-toggle="pill" routerLink="home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+          <a class="nav-link text-dark navtab my-1 text-left" data-toggle="pill" routerLink="myday" role="tab" aria-controls="v-pills-messages" aria-selected="false">My day <span style="float: right;">{{taskcount}}</span></a>
+          <a class="nav-link text-dark navtab my-1 text-left" data-toggle="pill" routerLink="important" role="tab" aria-controls="v-pills-messages" aria-selected="false">Important <span style="float: right;">{{impcount}}</span></a>
+          <a class="nav-link text-dark navtab my-1 text-left" data-toggle="pill" routerLink="tasks" role="tab" aria-controls="v-pills-messages" aria-selected="false">Tasks</a>
+          <a class="nav-link text-dark mavtab my-1 text-left" data-toggle="pill" routerLink="about" role="tab" aria-controls="v-pills-profile" aria-selected="false">About</a>
+        </div>
+      </div>
+      <div class="col-9">
+        <router-outlet class="p-3"></router-outlet>
+      </div>
+    </div>
+  </body>
+</html>
